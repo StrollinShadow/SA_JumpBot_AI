@@ -6,7 +6,7 @@
     "install-python": "pip install -r requirements.txt",
     "install-java": "echo 'Please ensure Maven is installed and run mvn install manually'",
     "postinstall": "npm run install-python && npm run install-java",
-    "start": "node yourMainScript.js",
+    "start": "python app.py",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Max Foll",

@@ -108,9 +108,6 @@ function createObstacle(spawnMiddle = false) {
         case 1:
           obstacle.classList.add("flying");
           break;
-        case 2:
-          obstacle.classList.add("higher");
-          break;
       }
 
       gameContainer.appendChild(obstacle);
@@ -126,15 +123,12 @@ function createObstacle(spawnMiddle = false) {
     obstacle.classList.add("obstacle");
 
     // Randomly assign obstacle type
-    let obstacleType = Math.floor(Math.random() * 3);
+    let obstacleType = Math.floor(Math.random() * 2);
     switch (obstacleType) {
       case 0: // Normal obstacle, no additional class needed
         break;
       case 1:
         obstacle.classList.add("flying");
-        break;
-      case 2:
-        obstacle.classList.add("higher");
         break;
     }
 
