@@ -1,0 +1,84 @@
+#game-container {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+#player {
+  width: 30px;
+  height: 70px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+}
+
+.obstacle.flying {
+  bottom: 50px; /* Adjust for flying height */
+  background-color: red; /* Different color for flying obstacle */
+}
+
+.obstacle.higher {
+  height: 50px; /* Taller than normal */
+  background-color: red; /* Different color for higher obstacle */
+}
+
+.obstacle {
+  width: 20px;
+  height: 30px;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+}
+
+#game-over-screen {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 20px;
+}
+.jump {
+  animation: jump 800ms cubic-bezier(0.28, 0.48, 0.42, 1.4);
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 100px;
+  } /* Adjust the height for a higher jump */
+  100% {
+    bottom: 0;
+  }
+}
+#score {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: green;
+  z-index: 2; /* Ensure it's above other elements */
+}
+
+.crouch {
+  animation: crouch 800ms cubic-bezier(0.28, 0.48, 0.42, 1.4);
+}
+
+@keyframes crouch {
+  0%,
+  100% {
+    height: 70px; /* Normal height */
+  }
+  50% {
+    height: 40px; /* Reduced height while crouching */
+  }
+}

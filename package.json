@@ -1,0 +1,18 @@
+{
+  "name": "sa",
+  "version": "4.2.0",
+  "description": "A project with Java, HTML, CSS, Python, and Node.js dependencies",
+  "scripts": {
+    "install-python": "pip install -r requirements.txt",
+    "install-java": "echo 'Please ensure Maven is installed and run mvn install manually'",
+    "postinstall": "npm run install-python && npm run install-java",
+    "start": "node yourMainScript.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Max Foll",
+  "license": "ISC",
+  "dependencies": {
+    "tensorflow": "^2.15.0",
+    "websockets": "latest"
+  }
+}
